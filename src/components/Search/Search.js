@@ -2,6 +2,7 @@ import React, { useState, useCallback } from 'react'
 
 const Search = () => {
   const [value, setValue] = useState('')
+  const [result, setResult] = useState('')
 
   const handleChange = useCallback(
     (e) => {
@@ -17,24 +18,33 @@ const Search = () => {
         const response = await fetch(url)
         const data = await response.json()
 
-        return data.subject
+        return data ? data.subject : ''
       }
 
       const { name, title } = await fetchData()
-      alert(`${name} - ${title}`)
+      const url = `https://${name}-ege.sdamgia.ru/`
+      const data = {
+        title: title,
+        url: url
+      }
+      setResult(name ? data : '')
+
     },
-    [value]
+    [value, result]
   )
 
   return (
     <div>
-      <input
-        type="text"
-        placeholder="Searching..."
-        value={value}
-        onChange={handleChange}
-      />
-      <button onClick={handleClick}>Поиск</button>
+      <div>
+        <input
+          type="text"
+          placeholder="Searching..."
+          value={value}
+          onChange={handleChange}
+        />
+        <button onClick={handleClick}>Поиск</button>
+      </div>
+      {result && <div><a href={result.url}>{result.title}</a></div>}
     </div>
   )
 }
