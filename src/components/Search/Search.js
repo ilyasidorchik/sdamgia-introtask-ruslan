@@ -25,7 +25,7 @@ const Search = () => {
       const url = `https://${name}-ege.sdamgia.ru`
       const dataLink = {
         title: title,
-        url: <a href={url}>{title}</a>
+        url: url
       }
 
       setResult(dataLink)
@@ -45,7 +45,7 @@ const Search = () => {
         />
         <button onClick={handleClick}>Поиск</button>
       </div>
-      {result && <div>{result.url}</div>}
+      {result && <div><a href={result.url}>{result.title}</a></div>}
     </div>
   )
 }
