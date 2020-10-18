@@ -22,10 +22,10 @@ const Search = () => {
       }
 
       const { name, title } = await fetchData()
-      const url = <div><a href={`https://${name}-ege.sdamgia.ru/`}>{title}</a></div>
+      const url = `https://${name}-ege.sdamgia.ru`
+      const link = <a href={url}>{title}</a>
 
-      setResult(name ? url : '')
-
+      setResult(link)
     },
     [value, result]
   )
@@ -41,7 +41,7 @@ const Search = () => {
         />
         <button onClick={handleClick}>Поиск</button>
       </div>
-      {result}
+      {result && <div>{result}</div>}
     </div>
   )
 }
