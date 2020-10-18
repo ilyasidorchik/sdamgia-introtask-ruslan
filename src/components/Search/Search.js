@@ -23,12 +23,11 @@ const Search = () => {
 
       const { name, title } = await fetchData()
       const url = `https://${name}-ege.sdamgia.ru`
-      const dataLink = {
+      
+      setResult({
         title: title,
         url: url
-      }
-
-      setResult(dataLink)
+      })
 
     },
     [value, result]
