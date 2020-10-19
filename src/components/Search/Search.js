@@ -1,4 +1,5 @@
 import React, { useState, useCallback } from 'react'
+import Input from './Input/Input'
 
 const Search = () => {
   const [value, setValue] = useState('')
@@ -37,12 +38,13 @@ const Search = () => {
   return (
     <div>
       <div>
-        <input
+        {/* <input
           type="text"
           placeholder="Searching..."
           value={value}
           onChange={handleChange}
-        />
+        /> */}
+        <Input/>
         <button onClick={handleClick}>Поиск</button>
       </div>
       {result && <div>{result.url}</div>}
