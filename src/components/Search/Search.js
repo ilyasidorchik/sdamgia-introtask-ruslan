@@ -2,7 +2,7 @@ import React, { useState, useCallback } from 'react'
 
 const Search = () => {
   const [value, setValue] = useState('')
-  const [result, setResult] = useState('')
+  const [result, setResult] = useState(null)
 
   const handleChange = useCallback(
     (e) => {
@@ -22,10 +22,10 @@ const Search = () => {
       }
 
       const { name, title } = await fetchData()
-      const url = `https://${name}-ege.sdamgia.ru`
+      const url = <a href={`https://${name}-ege.sdamgia.ru`}>{title}</a>
 
       setResult({
-        title: title,
+        title,
         url: url
       })
 
@@ -44,7 +44,7 @@ const Search = () => {
         />
         <button onClick={handleClick}>Поиск</button>
       </div>
-      {result && <div> <a href={result.url}>{result.title}</a> </div>}
+      {result && <div> {result.url} </div>}
     </div>
   )
 }
