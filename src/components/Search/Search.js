@@ -1,5 +1,4 @@
 import React, { useState, useCallback } from 'react'
-import Input from './Input/Input'
 
 const Search = () => {
   const [value, setValue] = useState('')
@@ -35,16 +34,22 @@ const Search = () => {
     [value, result]
   )
 
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      handleClick()
+    }
+  }
+
   return (
     <div>
       <div>
-        {/* <input
+        <input
           type="text"
           placeholder="Searching..."
           value={value}
           onChange={handleChange}
-        /> */}
-        <Input/>
+          onKeyPress={handleKeyPress}
+        />
         <button onClick={handleClick}>Поиск</button>
       </div>
       {result && <div>{result.url}</div>}
