@@ -42,16 +42,15 @@ const Search = () => {
 
   return (
     <div>
-      <div>
+      <form onKeyPress={handleKeyPress}>
         <input
           type="text"
           placeholder="Searching..."
           value={value}
           onChange={handleChange}
-          onKeyPress={handleKeyPress}
         />
         <button onClick={handleClick}>Поиск</button>
-      </div>
+      </form>
       {result && <div>{result.url}</div>}
     </div>
   )
