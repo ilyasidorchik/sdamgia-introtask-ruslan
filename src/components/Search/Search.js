@@ -2,7 +2,7 @@ import React, { useState, useCallback } from 'react'
 
 const Search = () => {
   const [value, setValue] = useState('')
-  const [result, setResult] = useState(null)
+  const [result, setResult] = useState('')
 
   const handleChange = useCallback(
     (e) => {
@@ -22,20 +22,20 @@ const Search = () => {
       }
 
       const { name, title } = await fetchData()
-      const url = <a href={`https://${name}-ege.sdamgia.ru`}>{title}</a>
+      const url = `https://${name}-ege.sdamgia.ru`
+      const dataLink = {
+        title: title,
+        url: <a href={url}>{title}</a>
+      }
 
-      setResult({
-        title,
-        url: url
-      })
+      setResult(dataLink)
 
     },
     [value, result]
   )
-
   return (
     <div>
-      <div>
+      <form onsubmit={handleClick}>
         <input
           type="text"
           placeholder="Searching..."
@@ -43,9 +43,9 @@ const Search = () => {
           onChange={handleChange}
         />
         <button onClick={handleClick}>Поиск</button>
-      </div>
-      {result && <div> {result.url} </div>}
-    </div>
+      </form >
+      {result && <div>{result.url}</div>}
+    </div >
   )
 }
 
