@@ -11,8 +11,10 @@ const Search = () => {
     []
   )
 
-  const handleClick = useCallback(
+  const handleSubmit = useCallback(
     async (e) => {
+      e.preventDefault()
+
       const fetchData = async () => {
         const url = `https://sdamgia-homework-backend.herokuapp.com/api/search?query=${value}`
         const response = await fetch(url)
@@ -22,7 +24,6 @@ const Search = () => {
       }
 
       const { name, title } = await fetchData()
-      e.preventDefault()
 
       setResult({
         title,
@@ -35,7 +36,7 @@ const Search = () => {
 
   return (
     <div>
-      <form onSubmit={handleClick}>
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Searching..."
