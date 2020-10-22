@@ -23,19 +23,16 @@ const Search = () => {
 
       const { name, title } = await fetchData()
       const url = `https://${name}-ege.sdamgia.ru`
-      const dataLink = {
-        title: title,
-        url: <a href={url}>{title}</a>
-      }
+      const link = <a href={url}>{title}</a>
 
-      setResult(dataLink)
+      setResult(link)
 
     },
-    [value, result]
+    [value]
   )
   return (
     <div>
-      <form onsubmit={handleClick}>
+      <form onSubmit={handleClick}>
         <input
           type="text"
           placeholder="Searching..."
@@ -44,7 +41,7 @@ const Search = () => {
         />
         <button onClick={handleClick}>Поиск</button>
       </form >
-      {result && <div>{result.url}</div>}
+      {result && <div>{result}</div>}
     </div >
   )
 }
