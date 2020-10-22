@@ -34,15 +34,9 @@ const Search = () => {
     [value, result]
   )
 
-  const handleKeyPress = (e) => {
-    if (e.key === 'Enter') {
-      handleClick()
-    }
-  }
-
   return (
     <div>
-      <form onKeyPress={handleKeyPress}>
+      <form onSubmit={handleClick}>
         <input
           type="text"
           placeholder="Searching..."
