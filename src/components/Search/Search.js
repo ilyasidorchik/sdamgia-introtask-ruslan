@@ -21,10 +21,14 @@ const Search = () => {
         return data ? data.subject : ''
       }
 
-      const { name } = await fetchData()
+      const { name, title } = await fetchData()
       const url = `https://${name}-ege.sdamgia.ru`
+      const dataLink = {
+        title,
+        url: url
+      }
 
-      setResult(url)
+      setResult(dataLink)
 
     },
     [value]
@@ -40,7 +44,7 @@ const Search = () => {
         />
         <button>Поиск</button>
       </form >
-      {result && <div><a href={`${result.url}`}>{`${result.url}`}</a></div>}
+      {result && <div><a href={result.url}>{result.name}</a></div>}
     </div >
   )
 }
