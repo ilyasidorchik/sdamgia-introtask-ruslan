@@ -7,6 +7,7 @@ const Search = () => {
   const handleChange = useCallback(
     (e) => {
       setValue(e.target.value);
+      e.preventDefault();
     },
     []
   )
@@ -32,13 +33,9 @@ const Search = () => {
     [value]
   )
 
-  const handleSubmit = (event) => {
-    event.preventDefault()
-  }
-
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleChange}>
         <input
           type="text"
           placeholder="Searching..."
