@@ -2,7 +2,7 @@ import React, { useState, useCallback } from 'react'
 
 const Search = () => {
   const [value, setValue] = useState('')
-  const [result, setResult] = useState('')
+  const [result, setResult] = useState(null) 
 
   const handleChange = useCallback(
     (e) => {
