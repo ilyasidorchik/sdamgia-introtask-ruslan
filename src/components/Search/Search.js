@@ -31,9 +31,14 @@ const Search = () => {
     },
     [value]
   )
+
+  const handleSubmit = (event) => {
+    event.preventDefault()
+  }
+
   return (
     <div>
-      <form onSubmit={handleClick} onСlick={event.preventDefault()}>
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Searching..."
