@@ -1,4 +1,5 @@
 import React, { useState, useCallback } from 'react'
+import Result from './Result/Result'
 
 const Search = () => {
   const [value, setValue] = useState('')
@@ -45,7 +46,7 @@ const Search = () => {
         />
         <button>Поиск</button>
       </form >
-      {result && <div><a href={`https://${result.name}-ege.sdamgia.ru`}>{result.title}</a></div>}
+      {result && <Result name={result.name} title={result.title} />}
     </div >
   )
 }
