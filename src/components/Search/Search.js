@@ -27,7 +27,7 @@ const Search = () => {
 
       setResult({
         title,
-        name: name
+        name
       })
 
     },
