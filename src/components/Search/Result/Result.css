@@ -1,0 +1,12 @@
+.search-container__result {
+  width: 100%;
+  padding: 8px 0;
+}
+
+.search-container__result a {
+  display: inline-block;
+  border-radius: 3px;
+  padding: 5px 8px;
+  background-color: #ffe3d0;
+  color: #ff6600;
+}
