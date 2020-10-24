@@ -1,4 +1,5 @@
 import React, { useState, useCallback } from 'react'
+
 import Result from './Result/Result'
 
 const Search = () => {
