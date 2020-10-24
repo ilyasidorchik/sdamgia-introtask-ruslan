@@ -1,11 +1,5 @@
 import React from 'react'
 
-const Result = (props) => {
-  return (
-    <div>
-      <a href={`https://${props.name}-ege.sdamgia.ru`}>{props.title}</a>
-    </div>
-  )
-}
+const Result = ({name, title}) => <div><a href={`https://${name}-ege.sdamgia.ru`}>{title}</a></div>
 
 export default Result
