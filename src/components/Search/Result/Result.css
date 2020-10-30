@@ -1,9 +1,9 @@
-.search-container__result {
+.Container-Result {
 	width: 100%;
 	padding: 8px 0;
 }
 
-.search-container__result a {
+.Container-Result a {
 	display: inline-block;
 	border-radius: 3px;
 	padding: 5px 8px;
