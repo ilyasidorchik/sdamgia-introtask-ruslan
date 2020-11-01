@@ -37,17 +37,20 @@ const Search = () => {
     [value]
   )
 
+  const form = cn('Form')
+  const container = cn('Container')
+
   return (
-    <div className="Container">
-      <form className="Form" onSubmit={handleSubmit}>
+    <div className={container()}>
+      <form className={form()} onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Searching..."
           value={value}
           onChange={handleChange}
-          className="Form-Input"
+          className={form('Input')}
         />
-        <button className="Form-Button">Поиск</button>
+        <button className={form('Button')}>Поиск</button>
       </form >
       {result && <Result name={result.name} title={result.title} />}
     </div >
