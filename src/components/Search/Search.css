@@ -1,9 +1,9 @@
-.Container,
-.Form {
+.Search,
+.Search-Form {
 	width: 100%;
 }
 
-.Form-Input {
+.Search-Input {
 	background-color: #f0f0f0;
 	padding: 5px 8px 6px;
 	margin-right: 5px;
@@ -14,7 +14,7 @@
 	box-sizing: border-box;
 }
 
-.Form-Button {
+.Search-Button {
 	display: inline-block;
 	min-width: 60px;
 	margin-top: 9px;

@@ -1,9 +1,9 @@
-.Container-Result {
+.Result {
 	width: 100%;
 	padding: 8px 0;
 }
 
-.Container-Result a {
+.Result-Link {
 	display: inline-block;
 	border-radius: 3px;
 	padding: 5px 8px;
