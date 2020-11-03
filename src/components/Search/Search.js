@@ -19,7 +19,7 @@ const Search = () => {
       e.preventDefault()
 
       const fetchData = async () => {
-        const url = `https://sdamgia-homework-backend.herokuapp.com/api/search?query=${value}`
+        const url = `https://sdamgia-homework-backend.herokuapp.com/api/cnSearch?query=${value}`
         const response = await fetch(url)
         const data = await response.json()
 
@@ -37,19 +37,19 @@ const Search = () => {
     [value]
   )
 
-  const search = cn("Search")
+  const cnSearch = cn("Search")
 
   return (
-    <div className={search()}>
-      <form className={search('Form')} onSubmit={handleSubmit}>
+    <div className={cnSearch()}>
+      <form className={cnSearch('Form')} onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Searching..."
           value={value}
           onChange={handleChange}
-          className={search('Input')}
+          className={cnSearch('Input')}
         />
-        <button className={search('Button')}>Поиск</button>
+        <button className={cnSearch('Button')}>Поиск</button>
       </form >
       {result && <Result name={result.name} title={result.title} />}
     </div >

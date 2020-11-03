@@ -3,10 +3,10 @@ import React from 'react'
 import './Result.css'
 
 const Result = ({ name, title }) => {
-  const result = cn('Result')
+  const cnResult = cn('Result')
 
   return (
-    <div className={result()}><a className={result('Link')} href={`https://${name}-ege.sdamgia.ru`}>{title}</a></div>
+    <div className={cnResult()}><a className={cnResult('Link')} href={`https://${name}-ege.sdamgia.ru`}>{title}</a></div>
   )
 }
 export default Result
