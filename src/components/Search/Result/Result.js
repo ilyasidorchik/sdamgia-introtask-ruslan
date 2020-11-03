@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './Result.css'
+import './Result.scss'
 
 const Result = ({ name, title }) => {
   const cnResult = cn('Result')

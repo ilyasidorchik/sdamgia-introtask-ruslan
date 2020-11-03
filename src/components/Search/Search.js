@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react'
 
 import Result from './Result/Result'
-import './Search.css'
+import './Search.scss'
 
 const Search = () => {
   const [value, setValue] = useState('')
@@ -19,7 +19,7 @@ const Search = () => {
       e.preventDefault()
 
       const fetchData = async () => {
-        const url = `https://sdamgia-homework-backend.herokuapp.com/api/cnSearch?query=${value}`
+        const url = `https://sdamgia-homework-backend.herokuapp.com/api/search?query=${value}`
         const response = await fetch(url)
         const data = await response.json()
 
