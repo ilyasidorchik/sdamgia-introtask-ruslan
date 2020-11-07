@@ -1,6 +1,8 @@
 import React, { useState, useCallback } from 'react'
+import { cn } from '@bem-react/classname'
 
 import Result from './Result/Result'
+import './Search.scss'
 
 const Search = () => {
   const [value, setValue] = useState('')
@@ -36,16 +38,19 @@ const Search = () => {
     [value]
   )
 
+  const cnSearch = cn("Search")
+
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div className={cnSearch()}>
+      <form className={cnSearch('Form')} onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Searching..."
           value={value}
           onChange={handleChange}
+          className={cnSearch('Input')}
         />
-        <button>Поиск</button>
+        <button className={cnSearch('Button')}>Поиск</button>
       </form >
       {result && <Result name={result.name} title={result.title} />}
     </div >

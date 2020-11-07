@@ -1,0 +1,37 @@
+.Search {
+  width: 100%;
+  
+  &-Form {
+    width: 100%;
+	}
+	
+  &-Input {
+    background-color: #f0f0f0;
+    padding: 5px 8px 6px;
+    margin-right: 5px;
+    border-radius: 3px;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    box-sizing: border-box;
+	}
+	
+  &-Button {
+    display: inline-block;
+    min-width: 60px;
+    margin-top: 9px;
+    padding: 5px 15px 6px;
+    font-size: 9pt;
+    font-family: Verdana, Geneva, sans-serif;
+    background-color: rgba(0, 0, 0, 0);
+    background: linear-gradient(to left, to top, #d2e2ff, #9dccff);
+    background-color: #d2e2ff;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+    box-shadow: inset -1px -1px 2px rgba(77, 77, 77, 0.3);
+    cursor: pointer;
+    transition-duration: 0.1s;
+	}
+	
+}
