@@ -1,4 +1,4 @@
-const api = async (value) => {
+const getSomething = async (value) => {
   const url = `https://sdamgia-homework-backend.herokuapp.com/api/search?query=${value}`
   const response = await fetch(url)
   const data = await response.json()
@@ -6,4 +6,4 @@ const api = async (value) => {
   return data ? data.subject : ''
 }
 
-export default api
+export default getSomething
