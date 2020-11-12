@@ -2,14 +2,14 @@ import React, { useState, useCallback } from 'react'
 import { cn } from '@bem-react/classname'
 
 import Result from './Result/Result'
-import api from './api'
+import { getApi } from './api'
 import './Search.scss'
 
 const Search = () => {
   const [value, setValue] = useState('')
   const [result, setResult] = useState(null)
 
-  const SearchForm = () => {
+  const useHelpers = () => {
     return {
       handleChange: useCallback(
         (e) => {
@@ -22,7 +22,7 @@ const Search = () => {
         async (e) => {
           e.preventDefault()
 
-          const { name, title } = await  api(value)
+          const { name, title } = await getApi(value)
 
           setResult({
             title,
@@ -35,7 +35,7 @@ const Search = () => {
     }
   }
 
-  const { handleChange, handleSubmit } = SearchForm()
+  const { handleChange, handleSubmit } = useHelpers()
 
   const cnSearch = cn("Search")
 
