@@ -2,7 +2,7 @@ import React, { useState, useCallback } from 'react'
 import { cn } from '@bem-react/classname'
 
 import Result from './Result/Result'
-import { getApi } from './api'
+import { getSubject } from './api'
 import './Search.scss'
 
 const Search = () => {
@@ -22,7 +22,7 @@ const Search = () => {
         async (e) => {
           e.preventDefault()
 
-          const { name, title } = await getApi(value)
+          const { name, title } = await getSubject(value)
 
           setResult({
             title,
