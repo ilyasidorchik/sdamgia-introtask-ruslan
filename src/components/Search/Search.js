@@ -2,43 +2,43 @@ import React, { useState, useCallback } from 'react'
 import { cn } from '@bem-react/classname'
 
 import Result from './Result/Result'
+import api from './api'
 import './Search.scss'
 
 const Search = () => {
   const [value, setValue] = useState('')
   const [result, setResult] = useState(null)
 
-  const handleChange = useCallback(
-    (e) => {
-      setValue(e.target.value);
-    },
-    []
-  )
+  const SearchForm = () => {
+    return {
+      handleChange: useCallback(
+        (e) => {
+          setValue(e.target.value);
+        },
+        []
+      ),
 
-  const handleSubmit = useCallback(
-    async (e) => {
-      e.preventDefault()
+      handleSubmit: useCallback(
+        async (e) => {
+          e.preventDefault()
 
-      const fetchData = async () => {
-        const url = `https://sdamgia-homework-backend.herokuapp.com/api/search?query=${value}`
-        const response = await fetch(url)
-        const data = await response.json()
+          const { name, title } = await  api(value)
 
-        return data ? data.subject : ''
-      }
+          setResult({
+            title,
+            name
+          })
+        },
+        [value]
+      )
 
-      const { name, title } = await fetchData()
+    }
+  }
 
-      setResult({
-        title,
-        name
-      })
-
-    },
-    [value]
-  )
+  const { handleChange, handleSubmit } = SearchForm()
 
   const cnSearch = cn("Search")
+
 
   return (
     <div className={cnSearch()}>
