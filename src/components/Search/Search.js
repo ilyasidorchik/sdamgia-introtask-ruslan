@@ -1,41 +1,14 @@
-import React, { useState, useCallback } from 'react'
+import React, { useState } from 'react'
 import { cn } from '@bem-react/classname'
 
 import Result from './Result/Result'
-import { getSubject } from './api'
+import { handleChange, handleSubmit } from './hooks/useHelper'
 import './Search.scss'
 
 const Search = () => {
   const [value, setValue] = useState('')
   const [result, setResult] = useState(null)
 
-  const useHelpers = () => {
-    return {
-      handleChange: useCallback(
-        (e) => {
-          setValue(e.target.value);
-        },
-        []
-      ),
-
-      handleSubmit: useCallback(
-        async (e) => {
-          e.preventDefault()
-
-          const { name, title } = await getSubject(value)
-
-          setResult({
-            title,
-            name
-          })
-        },
-        [value]
-      )
-
-    }
-  }
-
-  const { handleChange, handleSubmit } = useHelpers()
 
   const cnSearch = cn("Search")
 

@@ -1,27 +1,28 @@
+import React, { useState, useCallback } from 'react'
+
 import { getSubject } from './api'
 
-export const useHelpers = () => {
-  return {
-    handleChange: useCallback(
-      (e) => {
-        setValue(e.target.value);
-      },
-      []
-    ),
+export const handleChange = () => {
+  useCallback(
+    (e) => {
+      setValue(e.target.value);
+    },
+    []
+  )
+}
 
-    handleSubmit: useCallback(
-      async (e) => {
-        e.preventDefault()
+export const handleSubmit = () => {
+  useCallback(
+    async (e) => {
+      e.preventDefault()
 
-        const { name, title } = await getSubject(value)
+      const { name, title } = await getSubject(value)
 
-        setResult({
-          title,
-          name
-        })
-      },
-      [value]
-    )
-
-  }
+      setResult({
+        title,
+        name
+      })
+    },
+    [value]
+  )
 }
