@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { cn } from '@bem-react/classname'
 
 import Result from './Result/Result'
-import useHelpers from './hooks/useHelpers'
+import { useHelpers } from './hooks/useHelpers'
 import './Search.scss'
 
 const Search = () => {
