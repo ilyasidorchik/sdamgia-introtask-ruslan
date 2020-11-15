@@ -10,7 +10,7 @@ const Search = () => {
   const [value, setValue] = useState('')
   const [result, setResult] = useState(null)
 
-  const { handleChange, handleSubmit } = useHelpers()
+  const { handleChange, handleSubmit } = useHelpers(value, setValue, setResult)
 
   return (
     <div className={cnSearch()}>
