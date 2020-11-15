@@ -2,14 +2,13 @@ import React, { useState } from 'react'
 import { cn } from '@bem-react/classname'
 
 import Result from './Result/Result'
-import { useHelpers } from './hooks/useHelpers'
+import { useHelpers } from './hooks/'
 import './Search.scss'
 
 const Search = () => {
+  const cnSearch = cn("Search")
   const [value, setValue] = useState('')
   const [result, setResult] = useState(null)
-
-  const cnSearch = cn("Search")
 
   const { handleChange, handleSubmit } = useHelpers()
 
