@@ -1,8 +1,10 @@
-import React, { useCallback } from 'react'
+import { useState, useCallback } from 'react'
 
 import { getSubject } from '../api'
 
-export const useHelpers = (value, setValue, setResult) => {
+export const useHelpers = (setResult) => {
+  const [value, setValue] = useState('')
+
   const handleChange = useCallback(
     (e) => {
       setValue(e.target.value);
@@ -24,5 +26,5 @@ export const useHelpers = (value, setValue, setResult) => {
     [value, setResult]
   )
 
-  return { handleChange, handleSubmit }
+  return { value, handleChange, handleSubmit }
 }

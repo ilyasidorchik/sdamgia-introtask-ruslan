@@ -7,10 +7,9 @@ import './Search.scss'
 
 const Search = () => {
   const cnSearch = cn("Search")
-  const [value, setValue] = useState('')
   const [result, setResult] = useState(null)
 
-  const { handleChange, handleSubmit } = useHelpers(value, setValue, setResult)
+  const { value, handleChange, handleSubmit } = useHelpers(setResult)
 
   return (
     <div className={cnSearch()}>
