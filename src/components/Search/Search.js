@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { cn } from '@bem-react/classname'
 
 import Result from './Result/Result'
@@ -7,9 +7,7 @@ import './Search.scss'
 
 const Search = () => {
   const cnSearch = cn("Search")
-  const [result, setResult] = useState(null)
-
-  const { value, handleChange, handleSubmit } = useHelpers(setResult)
+  const { value, result, handleChange, handleSubmit } = useHelpers()
 
   return (
     <div className={cnSearch()}>

@@ -2,8 +2,9 @@ import { useState, useCallback } from 'react'
 
 import { getSubject } from '../api'
 
-export const useHelpers = (setResult) => {
+export const useHelpers = () => {
   const [value, setValue] = useState('')
+  const [result, setResult] = useState(null)
 
   const handleChange = useCallback(
     (e) => {
@@ -26,5 +27,5 @@ export const useHelpers = (setResult) => {
     [value, setResult]
   )
 
-  return { value, handleChange, handleSubmit }
+  return { value, result, handleChange, handleSubmit }
 }
