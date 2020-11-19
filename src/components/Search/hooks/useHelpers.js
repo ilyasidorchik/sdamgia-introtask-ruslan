@@ -8,7 +8,7 @@ export const useHelpers = () => {
 
   const handleChange = useCallback(
     (e) => {
-      setValue(e.target.value);
+      setValue(e.target.value)
     },
     [setValue]
   )
@@ -16,6 +16,7 @@ export const useHelpers = () => {
   const handleSubmit = useCallback(
     async (e) => {
       e.preventDefault()
+
 
       const { name, title } = await getSubject(value)
 

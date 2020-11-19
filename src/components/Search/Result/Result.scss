@@ -2,11 +2,17 @@
 	width: 100%;
 	padding: 8px 0;
 
-	&-Link {
+	&-Link, &-Error {
 		display: inline-block;
 		border-radius: 3px;
 		padding: 5px 8px;
 		background-color: #ffecdf;
 		color: #ff6600;
+	}
+
+	&-Error {
+		margin: 0;
+		background-color: #ffdfe5;
+		color: #ff0019;
 	}
 }

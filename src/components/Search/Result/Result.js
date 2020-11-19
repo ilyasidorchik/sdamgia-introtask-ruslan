@@ -8,7 +8,9 @@ const Result = ({ name, title }) => {
 
   return (
     <div className={cnResult()}>
-      <a className={cnResult('Link')} href={`https://${name}-ege.sdamgia.ru`}>{title}</a>
+      {name === undefined ?
+        <p className={cnResult('Error')}>Такого предмета нет.</p> :
+        <a className={cnResult('Link')} href={`https://${name}-ege.sdamgia.ru`}>{title}</a>}
     </div>
   )
 }
