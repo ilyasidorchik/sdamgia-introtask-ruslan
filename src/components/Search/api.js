@@ -10,7 +10,7 @@ export const getSubject = async (value) => {
     data.subject = data.subject ? data.subject : ''
 
   } catch {
-    data = { subject: 'err' }
+    console.log("error")
   }
 
   return data.subject
