@@ -17,7 +17,6 @@ export const useHelpers = () => {
     async (e) => {
       e.preventDefault()
 
-
       const { name, title } = await getSubject(value)
 
       setResult({

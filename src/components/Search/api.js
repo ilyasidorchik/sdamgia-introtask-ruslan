@@ -1,17 +1,15 @@
-
 export const getSubject = async (value) => {
-  let data
+  let response
 
   try {
-    const response = await fetch(
+    response = await fetch(
       `https://sdamgia-homework-backend.herokuapp.com/api/search?query=${value}`
     )
-    data = await response.json()
-    data.subject = data.subject ? data.subject : ''
-
-  } catch {
-    console.log("error")
+  } catch (error) {
+    console.log('error')
   }
 
-  return data.subject
+  const data = await response.json()
+
+  return data ? data.subject : ''
 }
