@@ -5,14 +5,9 @@ export const getSubject = async (value) => {
     const response = await fetch(url)
     const data = await response.json()
 
-    return data.subject === null ?
-      {
-        name: '',
-        title: '',
-      } :
-      data.subject
+    return data.subject ? data.subject : ''
   } catch (error) {
-    console.log('Error')
+    console.log('Такого предмета нет.')
   }
 
   return {

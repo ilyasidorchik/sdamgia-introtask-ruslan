@@ -21,7 +21,7 @@ const Search = () => {
         />
         <button className={cnSearch('Button')}>Поиск</button>
       </form >
-      {result && <Result name={result.name} title={result.title} />}
+      {result !== undefined && <Result name={result.name || ''} title={result.title} />}
     </div >
   )
 }
