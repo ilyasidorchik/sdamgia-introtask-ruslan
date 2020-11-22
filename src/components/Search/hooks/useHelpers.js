@@ -4,7 +4,7 @@ import { getSubject } from '../api'
 
 export const useHelpers = () => {
   const [value, setValue] = useState('')
-  const [result, setResult] = useState('')
+  const [result, setResult] = useState(null)
 
   const handleChange = useCallback(
     (e) => {

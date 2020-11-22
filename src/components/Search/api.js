@@ -6,7 +6,7 @@ export const getSubject = async (value) => {
     const data = await response.json();
     return data.subject
   } catch (error) {
-    console.log('error')
+    console.log(error)
   }
 
   return null
