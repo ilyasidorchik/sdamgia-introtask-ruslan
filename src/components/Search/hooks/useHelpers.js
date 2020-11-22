@@ -18,7 +18,11 @@ export const useHelpers = () => {
       e.preventDefault()
 
       const data = await getSubject(value)
-      const newResult = data ? { name: data.name, title: data.title } : null
+
+      const newResult = {
+        name: data ? data.name : '',
+        title: data ? data.title : '',
+      }
 
       setResult(newResult)
     },
