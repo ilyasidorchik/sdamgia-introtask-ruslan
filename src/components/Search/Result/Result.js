@@ -8,7 +8,18 @@ const Result = ({ name, title }) => {
 
   return (
     <div className={cnResult()}>
-      <a className={cnResult('Link')} href={`https://${name}-ege.sdamgia.ru`}>{title}</a>
+      {name ? (
+        <a
+          className={cnResult('Item', { type: 'default' })}
+          href={`https://${name}-ege.sdamgia.ru`}
+        >
+          {title}
+        </a>
+      ) : (
+        <span className={cnResult('Item', { type: 'error' })}>
+          Такого предмета нет.
+        </span>
+      )}
     </div>
   )
 }

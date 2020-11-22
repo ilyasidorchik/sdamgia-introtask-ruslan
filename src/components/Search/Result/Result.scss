@@ -2,11 +2,24 @@
 	width: 100%;
 	padding: 8px 0;
 
-	&-Link {
+	&-Item {
 		display: inline-block;
 		border-radius: 3px;
 		padding: 5px 8px;
-		background-color: #ffecdf;
-		color: #ff6600;
+		
+		&_type {
+			&_default {
+				background-color: #ffecdf;
+				color: #ff6600;				
+			}
+
+			&_error {
+				background-color: #ffdfe5;
+				color: #ff0019;
+			}
+
+		}
+		
 	}
+
 }
