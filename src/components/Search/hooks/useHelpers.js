@@ -17,12 +17,10 @@ export const useHelpers = () => {
     async (e) => {
       e.preventDefault()
 
-      const { name, title } = await getSubject(value)
+      const data = await getSubject(value)
+      const newResult = data ? { name: data.name, title: data.title } : null
 
-      setResult({
-        title,
-        name
-      })
+      setResult(newResult)
     },
     [value, setResult]
   )
