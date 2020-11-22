@@ -5,13 +5,10 @@ export const getSubject = async (value) => {
     const response = await fetch(url)
     const data = await response.json()
 
-    return data.subject ? data.subject : ''
+    return data.subject
   } catch (error) {
-    console.log('Такого предмета нет.')
+    console.log('error')
   }
 
-  return {
-    name: undefined,
-    title: undefined,
-  }
+  return null
 }
