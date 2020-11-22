@@ -23,10 +23,7 @@ const Search = () => {
       </form>
 
       {result !== undefined && (
-        <Result
-          name={result ? result.name : ''}
-          title={result ? result.title : ''}
-        />
+        <Result name={result.name} title={result.title} />
       )}
     </div>
   )
