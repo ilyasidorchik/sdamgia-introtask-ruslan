@@ -19,15 +19,6 @@ export const useHelpers = () => {
       e.preventDefault()
 
       dispatch(fetchSubject(value))
-
-      // const data = await getSubject(value)
-
-      // const newResult = {
-      //   name: data ? data.name : '',
-      //   title: data ? data.title : '',
-      // }
-
-      // dispatch(fetchSubjectSuccess(newResult))
     },
     [dispatch, value]
   )
