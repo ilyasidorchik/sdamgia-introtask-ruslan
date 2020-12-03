@@ -1,13 +1,13 @@
 import React from 'react'
 import { cn } from '@bem-react/classname'
 
-import Result from './Result/Result'
 import { useHelpers } from './hooks'
 import './Search.scss'
+import Result from './Result/Result'
 
 const Search = () => {
   const cnSearch = cn('Search')
-  const { value, result, handleChange, handleSubmit } = useHelpers()
+  const { value, handleChange, handleSubmit } = useHelpers()
 
   return (
     <div className={cnSearch()}>
@@ -21,12 +21,7 @@ const Search = () => {
         />
         <button className={cnSearch('Button')}>Поиск</button>
       </form >
-      {result && (
-        <Result
-          name={result.name}
-          title={result.title}
-        />
-      )}
+      <Result />
     </div >
   )
 }
