@@ -23,7 +23,12 @@ export const fetchSubject = (value) => async (dispatch) => {
   try {
     const result = await getSubject(value)
 
-    dispatch(fetchSubjectSuccess(result))
+    const newSubject = result || {
+      name: '',
+      title: '',
+    }
+
+    dispatch(fetchSubjectSuccess(newSubject))
   } catch (error) {
     console.log(error)
   }
