@@ -1,0 +1,15 @@
+.Footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  background-color: rgb(48, 48, 48);
+  padding: 1em 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: #eee;
+  text-align: center;
+  font-size: 1em;
+}

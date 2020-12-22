@@ -1,10 +1,11 @@
 import { useState, useCallback } from 'react'
+import { useDispatch } from 'react-redux'
 
-import { getSubject } from '../api'
+import { fetchSubject } from '../../../modules/subject'
 
 export const useHelpers = () => {
   const [value, setValue] = useState('')
-  const [result, setResult] = useState(null)
+  const dispatch = useDispatch()
 
   const handleChange = useCallback(
     (e) => {
@@ -17,17 +18,13 @@ export const useHelpers = () => {
     async (e) => {
       e.preventDefault()
 
-      const data = await getSubject(value)
+      // Получаем данные с сервера 
+      // и кладём в store с помощью dispatch()
+      dispatch(fetchSubject(value))
 
-      const newResult = {
-        name: data ? data.name : '',
-        title: data ? data.title : '',
-      }
-
-      setResult(newResult)
     },
-    [value, setResult]
+    [dispatch, value]
   )
 
-  return { value, result, handleChange, handleSubmit }
+  return { value, handleChange, handleSubmit }
 }

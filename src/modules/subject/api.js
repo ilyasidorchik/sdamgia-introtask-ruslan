@@ -4,6 +4,7 @@ export const getSubject = async (value) => {
   try {
     const response = await fetch(url);
     const data = await response.json();
+
     return data.subject
   } catch (error) {
     console.log(error)
