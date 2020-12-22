@@ -11,11 +11,9 @@ const Header = () => {
 
   return (
     <header className={cnHeader()}>
-      {subject ? 
-      (
-        subject.title ? `Давай учи предмет «${subject.title}»` : null 
-      ) : 
-      null}
+      {(subject && subject.title) 
+        ? `Давай учи предмет «${subject.title}»` : null
+      }
     </header>
   )
 }
