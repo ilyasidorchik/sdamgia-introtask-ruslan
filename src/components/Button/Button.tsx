@@ -1,6 +1,13 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 
-const Button = ({className, disabled, name}) => {
+interface IButtonProps {
+  name?: string,
+  className?: string,
+  disabled: false,
+  children: ReactNode 
+}
+
+const Button = ({ className, disabled, name }: IButtonProps) => {
   return (
     <button className={className}>{name}</button>
   )
