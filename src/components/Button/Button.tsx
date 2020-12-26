@@ -1,15 +1,14 @@
-import React, { ReactNode } from 'react'
+import React, { ReactNode, FC } from 'react'
 
 interface IButtonProps {
-  name?: string,
   className?: string,
   disabled: false,
   children: ReactNode 
 }
 
-const Button = ({ className, disabled, name }: IButtonProps) => {
+const Button: FC<IButtonProps> = ({ className, disabled, children}) => {
   return (
-    <button className={className}>{name}</button>
+    <button className={className}>{children}</button>
   )
 }
 
