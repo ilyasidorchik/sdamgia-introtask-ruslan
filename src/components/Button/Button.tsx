@@ -2,7 +2,7 @@ import React, { ReactNode, FC } from 'react'
 
 interface IButtonProps {
   className?: string,
-  disabled: false,
+  disabled: boolean,
   children: ReactNode 
 }
 
