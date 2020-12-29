@@ -4,6 +4,7 @@ import { cn } from '@bem-react/classname'
 import { useHelpers } from './hooks'
 import './Search.scss'
 import Result from './Result/Result'
+import Button from '../Button/Button'
 
 const Search = () => {
   const cnSearch = cn('Search')
@@ -19,7 +20,7 @@ const Search = () => {
           onChange={handleChange}
           className={cnSearch('Input')}
         />
-        <button className={cnSearch('Button')}>Поиск</button>
+        <Button children="Поиск" />
       </form >
       <Result />
     </div >
