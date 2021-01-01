@@ -20,7 +20,7 @@ const Search = () => {
           onChange={handleChange}
           className={cnSearch('Input')}
         />
-        <Button children="Поиск" />
+        <Button>Найти</Button>
       </form >
       <Result />
     </div >
