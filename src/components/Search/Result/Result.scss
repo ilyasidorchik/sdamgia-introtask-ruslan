@@ -1,25 +1,25 @@
 .Result {
-	width: 100%;
-	padding: 8px 0;
+  width: 100%;
+  padding: 8px 0;
 
-	&-Item {
-		display: inline-block;
-		border-radius: 3px;
-		padding: 5px 8px;
-		
-		&_type {
-			&_default {
-				background-color: #ffecdf;
-				color: #ff6600;				
-			}
+  &-Item {
+    display: inline-block;
+    padding: 5px 8px;
 
-			&_error {
-				background-color: #ffdfe5;
-				color: #ff0019;
-			}
+    border-radius: 3px;
 
-		}
-		
-	}
+    &_type {
+      &_default {
+        color: #ff6600;
 
+        background-color: #ffecdf;
+      }
+
+      &_error {
+        color: #ff0019;
+
+        background-color: #ffdfe5;
+      }
+    }
+  }
 }

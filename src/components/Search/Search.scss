@@ -1,21 +1,21 @@
 .Search {
   width: 100%;
-  
+
   &-Form {
     width: 100%;
     padding-top: 10px;
-	}
-	
+  }
+
   &-Input {
     box-sizing: border-box;
-    background-color: #f0f0f0;
     height: 28px;
-    padding: 5px 8px 6px;
     margin-right: 5px;
-    border-radius: 3px;
+    padding: 5px 8px 6px;
+
+    background-color: #f0f0f0;
     border: none;
-    box-shadow: none;
+    border-radius: 3px;
     outline: none;
-    box-sizing: border-box;
+    box-shadow: none;
   }
 }

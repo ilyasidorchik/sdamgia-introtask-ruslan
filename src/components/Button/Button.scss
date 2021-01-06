@@ -1,12 +1,14 @@
 .Button {
-  box-sizing: border-box;
   display: inline-block;
+  box-sizing: border-box;
   height: 28px;
   padding: 5px 15px 6px;
+
   font-size: 9pt;
   font-family: Verdana, Geneva, sans-serif;
-  background-color: rgba(0, 0, 0, 0);
+
   background: linear-gradient(to left, to top, #d2e2ff, #9dccff);
+  background-color: rgba(0, 0, 0, 0);
   background-color: #d2e2ff;
   border: none;
   border-radius: 6px;
