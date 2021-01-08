@@ -10,6 +10,7 @@ const Search = () => {
   const cnSearch = cn('Search')
   const { value, handleChange, handleSubmit } = useHelpers()
 
+  console.log(value === '' ? false : true)
   return (
     <div className={cnSearch()}>
       <form className={cnSearch('Form')} onSubmit={handleSubmit}>
@@ -20,7 +21,7 @@ const Search = () => {
           onChange={handleChange}
           className={cnSearch('Input')}
         />
-        <Button>Найти</Button>
+        <Button disabled={value === '' ? true : false}>Найти</Button>
       </form >
       <Result />
     </div >
