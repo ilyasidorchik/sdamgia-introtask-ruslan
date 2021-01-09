@@ -21,7 +21,7 @@ const Search = () => {
           onChange={handleChange}
           className={cnSearch('Input')}
         />
-        <Button disabled={value === '' ? true : false}>Найти</Button>
+        <Button disabled={!value}>Найти</Button>
       </form >
       <Result />
     </div >
