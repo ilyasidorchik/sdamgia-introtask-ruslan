@@ -13,9 +13,9 @@ const Button: FC<IButtonProps> = ({ className, disabled = false, children }) => 
   const cnButton = cn('Button')
 
   return (
-    <button className={cnButton(null, [className])} disabled={disabled}>
-      {children}
-    </button>
+  <button className={cnButton({disabled: disabled}, [className])} disabled={disabled}>
+    {children}
+  </button>
   )
 }
 
