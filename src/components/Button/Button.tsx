@@ -5,7 +5,7 @@ import './Button.scss'
 
 interface IButtonProps {
   className?: string,
-  disabled: boolean,
+  disabled?: boolean,
   children: ReactNode 
 }
 
