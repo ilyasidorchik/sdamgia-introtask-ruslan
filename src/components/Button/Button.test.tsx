@@ -19,11 +19,16 @@ describe('Button', () => {
   })
 
   describe('with extra className and disabled', () => {
+    const  { container } = render(<Button className={this.className}>Найти</Button>)
   
-    const component = container.querySelector('.Button', '.Button_disabled')
+    const component = container.querySelector('.Button.Button_disabled')
 
     it('renders correctly', () => {
       expect(component).toHaveTextContent('Найти')
+    })
+
+    it('renders className', () => {
+      expect(component).toHaveClass(component)
     })
 
     it('matches snapshot', () => {
