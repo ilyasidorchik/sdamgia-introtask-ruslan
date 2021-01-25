@@ -16,4 +16,4 @@ exports[`Button matches snapshot 1`] = `
 </button>
 `;
 
-exports[`Button with extra className and disabled matches snapshot 1`] = `null`;
+exports[`Button with extra className and disabled matches snapshot 1`] = null;
