@@ -4,9 +4,10 @@ import { render } from '@testing-library/react'
 import Button from './Button'
 
 describe('Button', () => {
-  const  { container } = render(<Button>Найти</Button>)
   
   describe('common', () => {
+    const { container } = render(<Button>Найти</Button>)
+
     const component = container.querySelector('.Button')
     
     it('renders correctly', () => {
@@ -20,11 +21,10 @@ describe('Button', () => {
 
   describe('with extra className and disabled', () => {
     const  { container } = render(<Button className={this.className} disabled={true}>Найти</Button>)
-  
     const component = container.querySelector('.Button.Button_disabled')
 
     it('renders correctly', () => {
-      expect(component).toHaveTextContent('Найти')
+      expect(component).toHaveTextContent('Сохранить')
     })
 
   })
