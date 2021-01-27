@@ -4,7 +4,6 @@ import { render } from '@testing-library/react'
 import Button from './Button'
 
 describe('Button', () => {
-  
   describe('common', () => {
     const { container } = render(<Button>Найти</Button>)
     const component = container.querySelector('.Button')
@@ -19,7 +18,7 @@ describe('Button', () => {
   })
 
   describe('with extra className and disabled', () => {
-    const  { container } = render(<Button className={this.className} disabled={true}>Сохранить</Button>)
+    const  { container } = render(<Button className={'Profile-Button'} disabled={true}>Сохранить</Button>)
     const component = container.querySelector('.Button.Button_disabled')
 
     it('renders correctly', () => {
