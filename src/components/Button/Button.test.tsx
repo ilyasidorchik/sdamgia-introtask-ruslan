@@ -7,7 +7,6 @@ describe('Button', () => {
   describe('common', () => {
     const { container } = render(<Button>Найти</Button>)
     const component = container.querySelector('.Button')
-    
     it('renders correctly', () => {
       expect(component).toHaveTextContent('Найти')
     })
@@ -27,7 +26,7 @@ describe('Button', () => {
 
     it('renders correctly', () => {
       expect(component).toHaveTextContent('Сохранить')
-      expect(component).toMatchInlineSnapshot();
+      expect(component).toMatchSnapshot()
     })
 
   })

@@ -8,12 +8,11 @@ exports[`Button common matches snapshot 1`] = `
 </button>
 `;
 
-exports[`Button matches snapshot 1`] = `
+exports[`Button with extra className and disabled renders correctly 1`] = `
 <button
-  class="Button"
+  class="Button Button_disabled Profile-Button"
+  disabled=""
 >
-  Найти
+  Сохранить
 </button>
 `;
-
-exports[`Button with extra className and disabled matches snapshot 1`] = null;
