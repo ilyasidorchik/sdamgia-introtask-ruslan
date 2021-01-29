@@ -16,7 +16,7 @@ const Search = () => {
       <form className={cnSearch('Form')} onSubmit={handleSubmit}>
         <input
           type='text'
-          placeholder='Searching...'
+          placeholder='Предмет'
           value={value}
           onChange={handleChange}
           className={cnSearch('Input')}

@@ -1,6 +1,8 @@
 {
-  "name": "search",
+  "name": "search-introtask-ruslan",
+  "author": "Akseonowww Ruslan",
   "version": "0.1.0",
+  "homepage": "https://sdamgia-introtask-ruslan.herokuapp.com/",
   "private": true,
   "dependencies": {
     "@bem-react/classname": "1.5.8",

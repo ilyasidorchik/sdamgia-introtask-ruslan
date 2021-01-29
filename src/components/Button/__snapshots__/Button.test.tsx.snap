@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button common matches snapshot 1`] = `
+<button
+  class="Button"
+>
+  Найти
+</button>
+`;
+
+exports[`Button with extra className and disabled matches snapshot 1`] = `
+<button
+  class="Button Button_disabled Profile-Button"
+  disabled=""
+>
+  Сохранить
+</button>
+`;
