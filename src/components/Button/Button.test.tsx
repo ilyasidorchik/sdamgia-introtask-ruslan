@@ -23,13 +23,12 @@ describe('Button', () => {
         Сохранить
       </Button>
     )
+    const component = container.querySelector('.Button.Button_disabled')
 
     it('renders correctly', () => {
       expect(component).toHaveTextContent('Сохранить')
       expect(component).toMatchInlineSnapshot();
     })
-    
-    const component = container.querySelector('.Button.Button_disabled')
 
   })
 
