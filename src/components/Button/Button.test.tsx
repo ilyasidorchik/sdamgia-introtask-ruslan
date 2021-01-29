@@ -18,12 +18,18 @@ describe('Button', () => {
   })
 
   describe('with extra className and disabled', () => {
-    const  { container } = render(<Button className={'Profile-Button'} disabled={true}>Сохранить</Button>)
-    const component = container.querySelector('.Button.Button_disabled')
+    const  { container } = render(
+      <Button className={'Profile-Button'} disabled={true}>
+        Сохранить
+      </Button>
+    )
 
     it('renders correctly', () => {
       expect(component).toHaveTextContent('Сохранить')
+      expect(component).toMatchInlineSnapshot();
     })
+    
+    const component = container.querySelector('.Button.Button_disabled')
 
   })
 
